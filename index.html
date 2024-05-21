@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 60px;
+            background-color: #333;
+            color: rgb(247, 191, 5);
+            padding: 10px 20px;
+            display: flex;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            font-weight: bolder;
+            margin-top: 2px;
+        }
+
+        nav {
+            margin-left: 300px;
+            margin-top: 6px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 50px;
+            font-size: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: rgb(247, 191, 5);;
+            background-color: #fff;
+            border-radius: 3px;
+            padding: 5px 10px;
+        }
+
+       .bt1 img{
+        width: 100%;
+        height: 670px;
+         background-size: contain;
+       }
+
+        .bt2 {
+            margin-top: 40px;
+            margin-left: 50px;
+            display: flex;
+            justify-content: flex-start;
+            overflow-x: auto;
+            margin-right: 50px;
+        }
+
+        .bt2 > .card {
+            width: 20rem; /* Set width to 20rem */
+            margin-right: 10px; /* Adjust the margin between cards */
+        }
+
+       
+        
+
+        .bt2 .carousel-inner {
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+
+        .bt2 .carousel-item {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0); /* Set background color for arrow controllers */
+            border-radius: 50%; /* Make the arrow controllers round */
+            width: 40px; /* Set width */
+            height: 40px; /* Set height */
+            margin-top: 80px;
+        }
+            
+        
+
+        .body2,
+        .body3,
+        .body4,
+        .body5 {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav2,
+        .nav3,
+        .nav4,
+        .nav5 {
+            margin-top: 100px;
+            background-color: #333;
+            color: rgb(247, 191, 5);
+            padding: 5px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+            
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+       
+      
+
+        .restaurant {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .restaurant h3,
+        .listing h3,
+        .listing2 h3,
+        .listing3 h3  {
+            margin-top: 0;
+            color: #333;
+            
+        }
+
+        .restaurant p,
+        .listing p,
+        .listing2 p ,
+        .listing3 p  {
+            margin-bottom: 5px;
+        }
+
+        .restaurant p strong,
+        .listing p strong,
+        .listing2 p strong,
+        .listing3 p strong {
+            color: #333;
+        }
+        
+        #realestate,
+        #school,
+        #clinic  {
+            margin-top: 20px;
+        }
+
+        .listing,
+        .listing2,
+        .listing3 {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        
+
+        .btn{
+               background-color: #333;
+               color: rgb(247, 191, 5);
+               width: 150px;
+        }
+        
+        .btn:hover {
+            background-color: rgba(0, 0, 0, 0.25); /* Transparent grey */
+            color: rgb(247, 191, 5);
+          }
+          
+
+        .card-body h5{
+            margin-left: 20px;
+            margin-top: 7px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .welcome-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 999; 
+            color: #000000; 
+           
+        }
+
+        .welcome-text h1{
+            font-size: 60px;
+            font-weight: bolder;
+        }
+
+
+
+/* Add media query for Samsung A51 to A71 */
+@media only screen and (min-width: 360px) and (max-width: 800px) {
+    nav {
+        margin-left: 20px; /* Adjust nav margin for smaller screens */
+        margin-top: 10px; /* Adjust nav margin for smaller screens */
+        display: block;
+    }
+
+    nav ul li a {
+         /* Adjust menu item margin for smaller screens */
+        font-size: 10px; /* Adjust menu item font size for smaller screens */
+        display: block;
+    }
+
+    .logo h1 {
+            font-size: 10px;
+            font-weight: bolder;
+            margin-top: 2px;
+        }
+
+
+        header {
+            height: auto;
+            background-color: #333;
+            display: block;
+           
+        }
+
+
+        
+    .bt2 {
+        margin-top: 20px; /* Adjust top margin for smaller screens */
+        margin-left: 0; /* Remove left margin for smaller screens */
+        height: 200px;
+        margin-right: 0;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .bt2 > .carousel-item {
+        width: 100%; /* Adjust carousel item width for smaller screens */
+        height: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        margin-top: 40px; /* Adjust margin-top for arrow controllers */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 12px; /* Adjust font size for arrow controllers */
+        width: 10px; /* Adjust width for arrow controllers */
+        height: 10px; /* Adjust height for arrow controllers */
+    }
+    .btn{
+               background-color: #333;
+               color: rgb(247, 191, 5);
+               width: 50px;
+               font-size: 4px;
+        }
+        
+        .bt2 {
+           
+           
+            justify-content: flex-start;
+            overflow-x: auto;
+            margin-right: 50px;
+        }
+
+
+        /* Media Query for smaller screens */
+
+    /* Adjust top margin for all section headings */
+    .nav2, .nav3, .nav4, .nav5 {
+        
+        margin: 0px;
+        
+    }
+
+    /* Reduce font size for all section headings */
+    .nav2 h1, .nav3 h1, .nav4 h1, .nav5 h1 {
+        font-size: 7px;
+
+    }
+
+    /* Reduce padding and margin for all section containers */
+    section {
+        
+        margin-bottom: 10px;
+    }
+
+    /* Adjust font size and margins for restaurant, clinic, school, and law firm listings */
+    .restaurant, .listing, .listing2, .listing3 {
+        font-size: 7px;
+        margin-bottom: 10px;
+        padding: 1px;
+    }
+
+    /* Adjust font size and margins for strong tags within listings */
+    .restaurant p strong, .listing p strong, .listing2 p strong, .listing3 p strong {
+        font-size: 7px;
+    }
+}
+
+
+
+        
+
+
+
+        
+        
+
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BIZZCONNECT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#bt2">Categories</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="#">Contact Us</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="bt1">
+        <img src="buildingd.jpg">
+    </div><!--bt1-->
+        
+
+
+
+    <!--bt2-->
+    <div id="bt2" class="bt2 carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-between">
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="img1.jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#restaurants" class="btn">Restaurants</a>
+                            <h5> Explore the best restaurants</h5>
+                        </div>
+                    </div>
+                    </div>
+
+
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="real.jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#realestate" class="btn ">Real State</a>
+                            <h5> Explore the best restaurants</h5>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="schl.jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#school" class="btn">School</a>
+                            <h5> Explore the best restaurants</h5>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+                    
+                    
+                   
+                    
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="clinics (1).jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#clinic" class="btn ">Clinic</a>
+                            <h5> Explore the best restaurants</h5>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-between">
+                    <!-- Add more cards here -->
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="buildingd.jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#" class="btn ">Law Firms</a>
+                            <h5> Explore the best restaurants</h5>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="img1.jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#restaurants" class="btn ">Restaurants</a>
+                            <h5> Explore the best restaurants</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="clinics (1).jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#clinic" class="btn ">Clinic</a>
+                            <h5> Explore the best restaurants</h5>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 20rem;"> <!-- Set width to 20rem -->
+                        <img src="schl.jpg" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <a href="#school" class="btn ">School</a>
+                            <h5> Explore the best restaurants</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bt2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bt2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div><!-- bt2 -->
+
+    <div class="body2">
+        <div class="nav2">
+            <h1>RESTAURANTS</h1>
+        </div>
+    
+        <section id="restaurants">
+           
+            <div class="restaurant">
+                <h3>Delicious Bites</h3>
+                <p>Delicious Bites offers a wide range of cuisines from around the world. Their signature dishes include mouth-watering steaks and exquisite seafood. The cozy ambiance and impeccable service make it a top choice for a memorable dining experience.</p>
+                <p><strong>Location:</strong> 123 Main Street, Cityville</p>
+                <p><strong>Rating:</strong> 4.8/5</p>
+            </div>
+    
+            <div class="restaurant">
+                <h3>Spice Haven</h3>
+                <p>Spice Haven is renowned for its authentic Indian flavors and aromatic spices. From creamy butter chicken to fiery vindaloo, each dish is a culinary delight. The vibrant decor and friendly staff add to the charm of this restaurant.</p>
+                <p><strong>Location:</strong> 456 Elm Street, Townsville</p>
+                <p><strong>Rating:</strong> 4.7/5</p>
+            </div>
+    
+            <div class="restaurant">
+                <h3>Sushi Delight</h3>
+                <p>Sushi Delight offers a sushi experience like no other. With fresh, high-quality ingredients and skilled chefs, every roll is a work of art. The minimalist decor and tranquil ambiance create the perfect setting for a sushi feast.</p>
+                <p><strong>Location:</strong> 789 Oak Avenue, Villageton</p>
+                <p><strong>Rating:</strong> 4.9/5</p>
+            </div>
+        </section>
+    
+
+
+
+
+        <div class="body3">
+            <div class="nav3">
+                <h1>REAL STATES</h1>
+            </div>
+    
+
+    <section id="realestate">
+        <div class="listing">
+            <h3>Cozy Cottage</h3>
+            <p>This cozy cottage offers a peaceful retreat in the heart of nature. With picturesque views of the surrounding mountains and a serene atmosphere, it's the perfect getaway.</p>
+            <p><strong>Location:</strong> 123 Mountain View Road, Countryside</p>
+            <p><strong>Price:</strong> $250,000</p>
+        </div>
+
+        <div class="listing">
+            <h3>Modern Condo</h3>
+            <p>This modern condo boasts sleek design and luxurious amenities. Enjoy city views from the floor-to-ceiling windows and take advantage of the building's fitness center and rooftop terrace.</p>
+            <p><strong>Location:</strong> 456 Urban Avenue, Metropolis</p>
+            <p><strong>Price:</strong> $500,000</p>
+        </div>
+
+        <div class="listing">
+            <h3>Country Estate</h3>
+            <p>This expansive country estate offers privacy and elegance. With acres of land, a spacious mansion, and stunning gardens, it's the perfect setting for gracious living.</p>
+            <p><strong>Location:</strong> 789 Oak Grove Lane, Countryscape</p>
+            <p><strong>Price:</strong> $1,200,000</p>
+        </div>
+    </section><!--real state-->
+
+
+    <div class="body4">
+        <div class="nav4">
+            <h1>SCHOOL</h1>
+        </div>
+
+    <section id="school">
+        <div class="listing2">
+            <h3>Community Elementary School</h3>
+            <p>Our community elementary school provides quality education in a supportive environment. With dedicated teachers and modern facilities, we foster academic excellence and personal growth.</p>
+            <p><strong>Location:</strong> 123 Elm Street, Townsville</p>
+            <p><strong>Grade Levels:</strong> K-5</p>
+        </div>
+
+        <div class="listing2">
+            <h3>Highland High School</h3>
+            <p>Highland High School offers a comprehensive curriculum and numerous extracurricular activities. Our goal is to prepare students for success in college and beyond through rigorous academics and a strong sense of community.</p>
+            <p><strong>Location:</strong> 456 Oak Avenue, Hilltop</p>
+            <p><strong>Grade Levels:</strong> 9-12</p>
+        </div>
+
+        <div class="listing2">
+            <h3>City Middle School</h3>
+            <p>City Middle School is committed to providing a supportive learning environment for students during their formative years. With experienced educators and engaging programs, we inspire students to reach their full potential.</p>
+            <p><strong>Location:</strong> 789 Maple Street, Downtown</p>
+            <p><strong>Grade Levels:</strong> 6-8</p>
+        </div>
+    </section><!--SCHOOL-->
+
+
+
+
+    
+    <div class="body5">
+        <div class="nav5">
+            <h1>CLINICS</h1>
+        </div>
+    <section id="clinic">
+        <div class="listing3">
+            <h3>Main Street Clinic</h3>
+            <p>Main Street Clinic provides comprehensive healthcare services to the community. Our experienced medical staff offers preventive care, treatment for acute illnesses, and management of chronic conditions.</p>
+            <p><strong>Location:</strong> 123 Main Street, City Center</p>
+            <p><strong>Services:</strong> General healthcare, vaccinations, wellness checks</p>
+        </div>
+
+        <div class="listing3">
+            <h3>Community Health Center</h3>
+            <p>Community Health Center is committed to promoting wellness and providing accessible healthcare services to individuals and families. We offer a range of medical, dental, and behavioral health services.</p>
+            <p><strong>Location:</strong> 456 Elm Avenue, Town Square</p>
+            <p><strong>Services:</strong> Medical, dental, behavioral health</p>
+        </div>
+
+        <div class="listing3">
+            <h3>Urgent Care Clinic</h3>
+            <p>Urgent Care Clinic offers convenient medical care for non-life-threatening conditions. Our board-certified physicians and compassionate staff provide prompt treatment without the need for an appointment.</p>
+            <p><strong>Location:</strong> 789 Oak Street, Downtown</p>
+            <p><strong>Services:</strong> Urgent medical care, minor injuries, diagnostic tests</p>
+        </div>
+    </section><!--clinic-->
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Professional Services Directory</p>
+    </footer>
+
+
+    <div class="welcome-text">
+        <h1>Connecting Businesses, Creating Success</h1>
+    </div>
+
+ 
+    <!-- Bootstrap JS files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
